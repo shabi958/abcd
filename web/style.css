@@ -1,0 +1,17 @@
+
+.d-block{
+    height: 600px;
+}
+.one{
+    padding-left: 20px;
+    font-size: 25px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.two{
+    font-family: sans-serif;
+    width: 90%;
+    text-align:center;
+    padding-left: 100px;
+}
