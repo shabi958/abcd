@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="./img/favlg.png" type="image/x-icon">
+    <style>
+
+      /* header css starts */
+          
+      *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+:root{
+	--bg-color: #000000;
+	--second-bg-color: #202020;
+	--text-color: #fff;
+	--second-color: #ccc;
+	/* --main-color: #ff4d05; */
+	--main-color: #fff;
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+}
+body{
+    background: var(--bg-color); 
+	color: var(--text-color);
+}
+header{
+	position:absolute;
+	width: 100%;
+	height: 120px;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--bg-color);
+	
+	border-bottom: 2px solid var(--main-color);
+	transition: all 1s ease;
+}
+.logo1{
+	width: 200px;
+	height: 100px;
+	margin-top: 20px;
+}
+
+span{
+	color: var(--main-color);
+}
+.navlist{
+	display: flex;
+	margin-left: 80px;
+}
+.navlist a{
+	color: var(--second-color);
+	font-size: 17px;
+	font-weight: 500;
+	margin: 0px 25px;
+	margin-right: 0px;
+	transition: all .45s ease;
+}
+.navlist a:hover{
+	color: var(--main-color);
+}
+.navlist a.active{
+	color: var(--main-color);
+}
+#menu-icon{
+	font-size: 35px;
+	color: var(--text-color);
+	z-index: 101;
+	cursor: pointer;
+	margin-left: 25px;
+	display: none;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+	background-color: var(--bg-color);
+	color: white;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+  }
+  .pi{
+	font-size: larger;
+	margin-left: 4px;
+	align-items: baseline;
+  }
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #000000;
+	min-width: 160px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: var(--text-color);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #000000}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+	background-color: #000000;
+	color: var(--main-color);
+  }
+
+
+  .search{
+    width: 230px;
+    float: left;
+    margin-left: 1px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 150px;
+    height: 40px;
+    /* background: transparent; */
+    border: 1px solid var(--main-color);
+    margin-top: 0px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn1{
+    width: 80px;
+    height: 40px;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    margin-top: 0px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn1:hover{
+    color: #000;
+}
+
+.btn1:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+
+@media (max-width: 1480px){
+	header{
+		padding: 12px 2.5%;
+		transition: .1s;
+	}
+	header.sticky{
+		padding: 10px 2.5%;
+		transition: .1s;;
+	}
+  section{
+		padding: 110px 3% 60px;
+	}
+	.end{
+		padding: 15px 3%;
+	}
+}
+
+@media (max-width: 1100px){
+	.header .navlist{
+		padding: 2px;
+	}
+  :root{
+		--big-font: 4rem;
+	  --h2-font: 2.5rem;
+	  --p-font: 1rem;
+	  transition: .1s;
+	}
+	.home-text h1{
+		font-size: 3rem;
+		text-align: center;
+	}
+	.home{
+		height: 87vh;
+	}
+}
+@media (max-width: 920px){
+	.about{
+		grid-template-columns: 1fr;
+	}
+	.about-img{
+		text-align: center;
+		order: 2;
+	}
+	.about-img img{
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+	.contact{
+		grid-template-columns: 1fr;
+	}
+}
+
+
+@media (max-width: 950px){
+	#menu-icon{
+		display: block;
+	}
+	.navlist{
+		position: absolute;
+		top: -1000px;
+		right: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		background: var(--bg-color);
+		text-align: left;
+		transition: all .45s ease;
+	}
+	.navlist a{
+		display: block;
+		margin: 17px;
+		font-size: 20px;
+		transition: all .45s ease;
+		color: var(--text-color);
+	}
+	.navlist a:hover{
+		color: var(--main-color);
+	}
+	.navlist a.active{
+		color: var(--text-color);
+	}
+	.navlist.open{
+		top: 100%;
+	}
+}
+@media (max-width:650px){
+	.search{
+		display: none;
+	}
+	.row .col p{
+		display: none;
+	}
+}
+
+
+
+/* header css ends */
+
+:root {
+  --primary-color: #FCFDFD;
+  --secondary-color: #818386;
+  --bg-color: #010712;
+  --button-color: #818386;
+  --h1-color: #FCFDFD;
+}
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  margin-top: 120px;
+}
+
+.left-col {
+  width: 45vw;
+  height: 86vh;
+  background-image: url("three.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 10rem;
+  padding: 0.5rem;
+}
+
+.right-col {
+  background: var(--bg-color);
+  width: 50vw;
+  height: 0vh;
+  padding: 5rem 3.5rem;
+}
+
+.hd, label, .bt, .description {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+.hd {
+  color:var(--h1-color);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+}
+
+p {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.01rem;
+  width: 40vw;
+  margin: 0.25rem 0;
+}
+
+label, .description {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 0.625rem;
+}
+
+form {
+  width: 31.25rem;
+  position: relative;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+input, textarea, label {
+  width: 40vw;
+  display: block;
+}
+
+p, placeholder, input, textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--primary-color);
+}
+
+input, textarea {
+  color: var(--primary-color);
+  font-weight: 500;
+  background: var(--bg-color);
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.bt {
+  text-transform: uppercase;
+  font-weight: 300;
+  background: var(--button-color);
+  color: var(--bg-color);
+  width: 10rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+input:hover, textarea:hover, .bt:hover {
+  opacity: 0.5;
+}
+
+.bt:active {
+  opacity: 0.8;
+}
+
+
+#error, #success-msg {
+  width: 40vw;
+  margin: 0.125rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-family: 'Jost';
+  color: var(--secondary-color);
+  }
+
+  #success-msg {
+  transition-delay: 3s;
+  }
+
+@media only screen and (max-width: 950px) {
+  .logo {
+    width: 8rem;
+  }
+  .hd {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  input, textarea, .bt {
+    font-size: 0.65rem;
+  }
+  .bt {
+    width: 7rem;
+  }
+ 
+
+}
+    </style>
+</head>
+<body>
+<!-- icon's links -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	 <!----header design--->
+	 <header>
+		<a href="./home.html" class="logo"><img class="logo1" src="./one.webp" alt="" width="200px" height="200px"></a>
+	  
+		<ul class="navlist">
+		  <li><a href="#" >Home</a></li>
+		  
+		  <li><a href="#">about us</a></li>
+		  <li><a href="#" class="active">Contact Us</a></li>
+		  <li><a href="#">contact us</a></li>
+		  <li><a href="#">SignUp/Login</a></li>
+		</ul>
+	  
+		<div class="search">
+		  <input class="srch" type="search" name="" placeholder="Type To text">
+		  <a href="#"> <button class="btn1">Search</button></a>
+		</div>
+	  
+	  
+		<div class="bx bx-menu" id="menu-icon">
+		  
+		</div>
+	  </header>
+
+
+
+
+
+
+<div class="contact-container">
+    <div class="left-col">
+      <img class="logo">
+    </div>
+    <div class="right-col">
+   
+      
+      <h1 class="hd">Contact us</h1>
+      <p>If you have an question or any problem regarding cricket news or regarding your account. Feel free to contact our management. We will gonna reply you as fast as we could.</p>
+      
+      <form id="contact-form" method="post">
+        <label for="name">Full name</label>
+     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+        <label for="email">Email Address</label>
+     <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+        <label for="message">Message</label>
+     <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+     <button class="bt" type="submit" id="submit" name="submit">Send</button>
+    
+      </form>
+      <div id="error"></div>
+     <div id="success-msg"></div>
+    </div>
+</div>
+
+  
+
+
+
+
+</body>
+</html>
